@@ -1,5 +1,6 @@
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/")
 (add-to-list 'load-path "~/.emacs.d/packages/")
+(load "~/.emacs.d/init-packages.el")
 
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
@@ -32,14 +33,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (add-to-list
-   'package-archives
-   '("melpa" . "http://melpa.org/packages/")
-   t)
-  (package-initialize))
 
 ;; make backup to a designated dir, mirroring the full path
 (defun my-backup-file-name (fpath)
