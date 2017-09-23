@@ -6,6 +6,7 @@ This is my emacs/xemacs setup file
 
 ```
 rm ~/.emacs
-cd .emacs.d
+rm -rf .emacs.d
 git clone https://github.com/yhuang69/emacs-setup.git
+ln -s emacs-setup .emacs.d
 ```
