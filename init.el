@@ -5,7 +5,7 @@
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
-(set-face-attribute 'default nil :height 140)
+(set-face-attribute 'default nil :height 130)
 
 ;; setup for tmux
 (setq x-select-enable-clipboard t
@@ -40,7 +40,8 @@
 If the new path's directories does not exist, create them."
   (let* (
 	(backupRootDir "~/.emacs.d/emacs-backup/")
-	(filePath (replace-regexp-in-string "[A-Za-z]:" "" fpath ));remove Windows driver letter in path, for example, “C:”
+	(filePath (replace-regexp-in-string "[A-Za-z]:" "" fpath ))
+					;remove Windows driver letter in path, for example, “C:”
 	(backupFilePath (replace-regexp-in-string "//" "/" (concat backupRootDir filePath "~") ))
 	)
     (make-directory (file-name-directory backupFilePath) (file-name-directory backupFilePath))
