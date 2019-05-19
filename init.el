@@ -33,7 +33,7 @@
     ("4ec8b6176354c43680d02594ce99e98134a6feb5d3537f7f68b9ee40020c214e" default)))
  '(delete-auto-save-files t)
  '(inhibit-startup-screen t)
- '(package-selected-packages (quote (python-mode autofit-frame json-mode ## go-mode))))
+ '(package-selected-packages (quote (python-mode json-mode ## go-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -128,9 +128,6 @@ If the new path's directories does not exist, create them."
 (xterm-mouse-mode t)
 (defun track-mouse (e))
 (setq mouse-sel-mode t)
-
-(require 'autofit-frame)
-(add-hook 'after-make-frame-functions 'fit-frame)
 
 ;; Load additional setup
 (load "~/.emacs.d/packages/custom-window-resize.el")
