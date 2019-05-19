@@ -3,7 +3,7 @@
 	     '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
 
-(setq package-list '(autofit-frame neotree))
+(setq package-list '(neotree json-mode yaml-mode))
 
 ; activate all the packages
 (package-initialize)
